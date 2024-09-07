@@ -1,4 +1,4 @@
-const buttonsModel = [
+const buttonsModel: readonly string[] = [
   'AC',
   '+/-',
   '%',

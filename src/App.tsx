@@ -5,7 +5,7 @@ import Display from './components/Display/Display.tsx'
 import GlobalStyle from './styles/Global.style.ts'
 
 function App() {
-  const [buttons] = useState(buttonsModel)
+  const [buttons] = useState<readonly string[]>(buttonsModel)
   const [number, setNumber] = useState('')
   const [numbers, setNumbers] = useState<string[]>([])
   const [previousNumber, setPreviousNumber] = useState('')

@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 
 export type CalculatorProps = {
-  buttons: string[]
+  buttons: readonly string[]
   number: string
   setNumber: Dispatch<SetStateAction<string>>
   numbers: string[]
