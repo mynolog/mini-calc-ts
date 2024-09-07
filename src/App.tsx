@@ -13,7 +13,7 @@ function App() {
   const [operators, setOperators] = useState<string[]>([])
   const [result, setResult] = useState('')
   const [results, setResults] = useState<string[]>([])
-  const [error, setError] = useState<string>('')
+  const [error, setError] = useState('')
 
   useEffect(() => {
     if (operator === 'AC') {
@@ -23,29 +23,29 @@ function App() {
     const calculate = (selectedOperator: string) => {
       if (numbers.length < 2 || !operator) return
       const [first, second] = numbers
-      let currentResult = 0
+      let calculateResult = 0
       switch (selectedOperator) {
         case '+':
-          currentResult = parseFloat(first) + parseFloat(second)
+          calculateResult = parseFloat(first) + parseFloat(second)
           break
         case '-':
-          currentResult = parseFloat(first) - parseFloat(second)
+          calculateResult = parseFloat(first) - parseFloat(second)
           break
         case '*':
-          currentResult = parseFloat(first) * parseFloat(second)
+          calculateResult = parseFloat(first) * parseFloat(second)
           break
         case '/':
           if (second === '0') {
             setError('0으로 나눌 수 없음')
           } else {
-            currentResult = parseFloat(first) / parseFloat(second)
+            calculateResult = parseFloat(first) / parseFloat(second)
           }
           break
         default:
           return
       }
-      setResult(currentResult.toString())
-      setResults([...currentResult.toString()])
+      setResult(calculateResult.toString())
+      setResults([...calculateResult.toString()])
       setNumber('')
       setNumbers([])
       setOperator('')
