@@ -1,20 +1,17 @@
 import type { DisplayProps } from '../../types/DisplayTypes.ts'
-import {
-  DisplayStyle,
-  DisplayWrapper,
-} from '../../styles/Display/Display.style.ts'
+import { DisplayBox, DisplayText } from '../../styles/Display/Display.style.ts'
 
 function Display({ number, previousNumber, result, error }: DisplayProps) {
   return (
-    <DisplayWrapper>
-      <DisplayStyle>
+    <DisplayBox>
+      <DisplayText>
         {error
           ? error
           : previousNumber
           ? previousNumber || result
           : number || result}
-      </DisplayStyle>
-    </DisplayWrapper>
+      </DisplayText>
+    </DisplayBox>
   )
 }
 

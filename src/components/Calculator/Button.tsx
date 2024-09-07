@@ -1,7 +1,7 @@
 import type { MouseEvent } from 'react'
 import type { ButtonProps } from '../../types/CalulatorTypes.ts'
 import validateNumber from '../../utils/validateNumber.ts'
-import ButtonStyle from '../../styles/Button/Button.style.ts'
+import ButtonText from '../../styles/Button/Button.style.ts'
 
 function Button({
   button,
@@ -60,9 +60,9 @@ function Button({
   }
 
   return (
-    <ButtonStyle value={button} onClick={handleButtonClick}>
+    <ButtonText value={button} onClick={handleButtonClick}>
       {button}
-    </ButtonStyle>
+    </ButtonText>
   )
 }
 

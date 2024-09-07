@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const ButtonStyle = styled.button`
+const ButtonText = styled.button`
   padding: 16px 20px;
   font-size: 18px;
   font-weight: 700;
@@ -20,4 +20,4 @@ const ButtonStyle = styled.button`
     transition: 0.2s;
   }
 `
-export default ButtonStyle
+export default ButtonText

@@ -1,6 +1,6 @@
 import type { CalculatorProps } from '../../types/CalulatorTypes.ts'
 import Button from './Button.tsx'
-import CalculatorWrapper from '../../styles/Calculator/Calculator.style.ts'
+import CalculatorBox from '../../styles/Calculator/Calculator.style.ts'
 
 function Calculator({
   buttons,
@@ -22,7 +22,7 @@ function Calculator({
   setError,
 }: CalculatorProps) {
   return (
-    <CalculatorWrapper>
+    <CalculatorBox>
       {buttons.map((button, index) => (
         <Button
           key={index}
@@ -45,7 +45,7 @@ function Calculator({
           setError={setError}
         />
       ))}
-    </CalculatorWrapper>
+    </CalculatorBox>
   )
 }
 
