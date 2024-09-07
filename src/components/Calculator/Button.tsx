@@ -1,6 +1,6 @@
 import type { MouseEvent } from 'react'
 import type { ButtonProps } from '../../types/CalulatorTypes.ts'
-import isNumber from '../../utils/isNumber.ts'
+import validateNumber from '../../utils/validateNumber.ts'
 import ButtonStyle from '../../styles/Button/Button.style.ts'
 
 function Button({
@@ -52,7 +52,7 @@ function Button({
         if (previousNumber) {
           setPreviousNumber('')
         }
-        if (isNumber(value)) {
+        if (validateNumber(value)) {
           if (number === '0') setNumber(value)
           else setNumber(number + value)
         }
